@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 #setup blueprints for all the urls 
 views = Blueprint('views', __name__)
@@ -7,6 +7,6 @@ views = Blueprint('views', __name__)
 @views.route('/')
 #will run whenever we go to the / roots
 def home():
-    return "<h1>Test</h1>"
+    return render_template("home.html")
 
 
